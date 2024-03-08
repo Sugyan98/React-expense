@@ -8,33 +8,24 @@ function App() {
       title: 'Toilet Paper',
       amount: 94.12,
       date: new Date(2020, 7, 14),
-      locationofExpenditure: 'Hyderabad'
+      location: 'Hyderabad'
     },
-    { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12), locationofExpenditure: 'Bangalore' },
+    { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12), location: 'Bangalore' },
     {
       id: 'e3',
       title: 'Car Insurance',
       amount: 294.67,
       date: new Date(2021, 2, 28),
-      locationofExpenditure: 'Delhi'
+      location: 'Delhi'
     },
     {
       id: 'e4',
       title: 'New Desk (Wooden)',
       amount: 450,
       date: new Date(2021, 5, 12),
-      locationofExpenditure: 'Mumbai'
+      location: 'Mumbai'
     },
   ];
-
-  // const components = expenses.map(element => {
-  //   <ExpenseItem
-  //   title={element.title}
-  //   amount={element.amount} 
-  //   date={element.date}
-  //   locationofExpenditure={element.locationofExpenditure}
-  //   ></ExpenseItem>
-  // })
 
   const props = [];
 
@@ -44,8 +35,8 @@ function App() {
       title={element.title}
       amount={element.amount} 
       date={element.date}
-      locationofExpenditure={element.locationofExpenditure}
-    ></ExpenseItem>)
+      location={element.location}
+    />)
   //   <ExpenseItem
   //   title={element.title}
   //   amount={element.amount} 
