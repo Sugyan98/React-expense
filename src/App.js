@@ -1,6 +1,8 @@
-import ExpenseItem from './Components/ExpenseItem'
+import Card from './Components/UI/Card';
+import ExpenseItem from './Components/Expenses/ExpenseItem'
+import './Components/Expenses/expenses.css'
 
-function App() {
+const App = () => {
 
   const expenses = [
     {
@@ -49,7 +51,9 @@ function App() {
     <div>
       <h2>Let's get started!</h2>
 
-      {props}
+      <Card className='expenses'>
+       {props}
+      </Card>
 
       {/* <ExpenseItem
        title={expenses[0].title}
