@@ -34,6 +34,7 @@ const App = () => {
   expenses.forEach(element => {
 
     props.push(<ExpenseItem
+      id={element.id}
       title={element.title}
       amount={element.amount} 
       date={element.date}
