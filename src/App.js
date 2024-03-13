@@ -2,6 +2,7 @@ import React from 'react';
 
 import Card from './Components/UI/Card';
 import ExpenseItem from './Components/Expenses/ExpenseItem'
+import ExpenseForm from './Components/NewExpense/ExpenseForm';
 import './Components/Expenses/expenses.css'
 
 const App = () => {
@@ -57,6 +58,8 @@ const App = () => {
       <Card className='expenses'>
        {props}
       </Card>
+
+      <ExpenseForm></ExpenseForm>
 
       {/* <ExpenseItem
        title={expenses[0].title}
