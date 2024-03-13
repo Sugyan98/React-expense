@@ -2,7 +2,7 @@ import React from 'react';
 
 import Card from './Components/UI/Card';
 import ExpenseItem from './Components/Expenses/ExpenseItem'
-import ExpenseForm from './Components/NewExpense/ExpenseForm';
+import NewExpense from './Components/NewExpense/NewExpense';
 import './Components/Expenses/expenses.css'
 
 const App = () => {
@@ -53,13 +53,10 @@ const App = () => {
 
   return (
     <div>
-      <h2>Let's get started!</h2>
-
+      <NewExpense/>
       <Card className='expenses'>
        {props}
       </Card>
-
-      <ExpenseForm></ExpenseForm>
 
       {/* <ExpenseItem
        title={expenses[0].title}
