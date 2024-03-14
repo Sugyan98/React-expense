@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import Card from './Components/UI/Card';
 import ExpenseItem from './Components/Expenses/ExpenseItem'
 import NewExpense from './Components/NewExpense/NewExpense';
+import Expenses from './Components/Expenses/Expenses'; 
 import './Components/Expenses/expenses.css'
 
 const App = () => {
@@ -32,56 +32,19 @@ const App = () => {
     },
   ];
 
-  const props = [];
+  const [exp, setExp] = useState(expenses);
+  const addExpenseHandler = (expense) => {
 
-  expenses.forEach(element => {
+    // setExp((prevState)=>[...prevState, expense]);
 
-    props.push(<ExpenseItem
-      id={element.id}
-      title={element.title}
-      amount={element.amount} 
-      date={element.date}
-      location={element.location}
-    />)
-  //   <ExpenseItem
-  //   title={element.title}
-  //   amount={element.amount} 
-  //   date={element.date}
-  //   locationofExpenditure={element.locationofExpenditure}
-  // ></ExpenseItem>
-  })
+    setExp([...exp, expense]);
+
+  }
 
   return (
     <div>
-      <NewExpense/>
-      <Card className='expenses'>
-       {props}
-      </Card>
-
-      {/* <ExpenseItem
-       title={expenses[0].title}
-       amount={expenses[0].amount} 
-       date={expenses[0].date}
-       locationofExpenditure={expenses[0].locationofExpenditure}
-      ></ExpenseItem>
-      <ExpenseItem
-       title={expenses[1].title}
-       amount={expenses[1].amount} 
-       date={expenses[1].date}
-       locationofExpenditure={expenses[1].locationofExpenditure}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={expenses[2].title}
-        amount={expenses[2].amount} 
-        date={expenses[2].date}
-        locationofExpenditure={expenses[2].locationofExpenditure}
-      ></ExpenseItem>
-      <ExpenseItem
-       title={expenses[3].title}
-       amount={expenses[3].amount} 
-       date={expenses[3].date}
-       locationofExpenditure={expenses[3].locationofExpenditure}
-      ></ExpenseItem> */}
+      <NewExpense onAddExpense = {addExpenseHandler}/>
+      <Expenses items={exp}/>
     </div>
   );
 }

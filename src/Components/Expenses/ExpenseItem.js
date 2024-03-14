@@ -33,12 +33,6 @@ const ExpenseItem = (props) => {
                 title={title}
             />
 
-            {/* <div className="expense-item__desciption">
-                <h2>{props.title}</h2>
-            </div>
-            <div>{props.locationofExpenditure}</div>
-            <div className="expense-item__price">${props.amount}</div> */}
-
             <button onClick = {removeItem} >Delete</button>
             <button onClick = {clickHandler}>Change Title</button>
             <button onClick = {updatePrice}>Update Price</button>
