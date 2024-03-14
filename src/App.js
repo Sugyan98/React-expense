@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import ExpenseItem from './Components/Expenses/ExpenseItem'
+// import ExpenseItem from './Components/Expenses/ExpenseItem'
 import NewExpense from './Components/NewExpense/NewExpense';
 import Expenses from './Components/Expenses/Expenses'; 
-import './Components/Expenses/expenses.css'
+// import './Components/Expenses/Expenses.css'
 
 const App = () => {
 
