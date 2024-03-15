@@ -8,7 +8,8 @@ import './ExpenseItem.css'
 const ExpenseItem = (props) => {
 
     return (
-        <Card className='expense-item'>
+        <li>
+            <Card className='expense-item'>
             <ExpenseDate date={props.date}/>
             <ExpenseDetails 
                 id={props.id}
@@ -16,8 +17,8 @@ const ExpenseItem = (props) => {
                 location={props.location} 
                 title={props.title}
             />
-
-        </Card>
+            </Card>
+        </li>
     )
 
 }
